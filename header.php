@@ -13,6 +13,7 @@ if (isset($_SESSION['id_utilisateur'])){
     $request = " SELECT login FROM utilisateurs WHERE id = '" . $_SESSION['id_utilisateur'] . "'";
     $query = mysqli_query($db, $request);
     $infoUser = mysqli_fetch_array($query);
+    var_dump($infoUser);
 }
 /**
  * @param $errors
@@ -44,7 +45,7 @@ function renderError($errors)
     <div class="navbar">
         <div class="logo">
 
-                <i class="fas fa-mug-hot"> <a href="index.php"></i> </a>
+            <a href="index.php">   <i class="fas fa-mug-hot"></i> </a>
 
         </div>
         <div class="link">
