@@ -1,6 +1,8 @@
 <?php
 $pageSelected = "discussion";
+session_start();
 
+var_dump($_SESSION);
 //se co à la bdd
 try {
     $bdd = new PDO('mysql:host=localhost;dbname=discussion;charset=utf8', 'root', '');
@@ -65,7 +67,7 @@ $fetchAll = $query->fetchAll();
                     <i> <?= $data['login'] ?> </i> le <?= $data['new_date'] ?> : <?= $data['message'] ?>
                 </div>
             <?php } ?>
-           <form action="#" method="post" class="form-text">
+           <form action="" method="post" class="form-text">
                <label for="message">Message : </label>
                <textarea type="text" name="message" id="message" rows="5" ></textarea><br/><br/>
                 <br/><br/>
