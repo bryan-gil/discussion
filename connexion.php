@@ -1,8 +1,6 @@
 <?php
 $pageSelected = "connexion";
 session_start();
-
-var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
