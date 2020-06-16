@@ -13,7 +13,7 @@ if (isset($_SESSION['id_utilisateur'])){
     $request = " SELECT login FROM utilisateurs WHERE id = '" . $_SESSION['id_utilisateur'] . "'";
     $query = mysqli_query($db, $request);
     $infoUser = mysqli_fetch_array($query);
-    var_dump($infoUser);
+
 }
 /**
  * @param $errors

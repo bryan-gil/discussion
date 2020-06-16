@@ -1,6 +1,6 @@
 <?php
 $pageSelected = "connexion";
-session_start();
+
 ?>
 
 <!DOCTYPE html>

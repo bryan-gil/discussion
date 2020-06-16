@@ -1,6 +1,6 @@
 <?php
 $pageSelected = "discussion";
-session_start();
+
 
 //se co à la bdd
 try {
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     //si le message n'est pas vide et envoyé
     if (!empty($message)) {
         //si la session existe
-        if (isset($_SESSION['connect']) == 1) {
+        if (isset($_SESSION) == true) {
 
             //puis préparer la requête d'insertion
             $req = $bdd->prepare("INSERT INTO messages(message, id_utilisateur, date) VALUES(:message, :id_utilisateur, CURTIME())");
