@@ -1,6 +1,7 @@
 <?php
 $pageSelected = "discussion";
-
+ini_set('display_errors', 'off');
+session_start();
 
 //se co à la bdd
 try {
